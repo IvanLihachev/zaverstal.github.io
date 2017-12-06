@@ -72,16 +72,16 @@ p{
 
 .header{
     @extend .clear;
-	padding: 30px 30px 5em;
+	padding: 30px 30px 4em;
 	position: relative;
     &__block{
         float: left;
         &_left{
-            width: 70%;
+            width: 73%;
             margin-right: 5%;
         }
         &_right{
-            width: 25%;
+            width: 22%;
         }
     }
 	&__face{

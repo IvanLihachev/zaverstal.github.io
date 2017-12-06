@@ -52,15 +52,15 @@ p {
     border-bottom: 1px solid rgba(24, 123, 226, 0.25); }
 
 .header {
-  padding: 30px 30px 5em;
+  padding: 30px 30px 4em;
   position: relative; }
   .header__block {
     float: left; }
     .header__block_left {
-      width: 70%;
+      width: 73%;
       margin-right: 5%; }
     .header__block_right {
-      width: 25%; }
+      width: 22%; }
   .header__face {
     display: inline-block;
     width: 200px;
