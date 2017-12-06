@@ -72,7 +72,7 @@ p{
 
 .header{
     @extend .clear;
-	padding: 30px 30px 4em;
+	padding: 10px 30px 3em;
 	position: relative;
     &__block{
         float: left;
@@ -129,7 +129,7 @@ p{
 	}
 	&__title{
 		padding-bottom: .1em;
-        font-weight: 700;
+        font-weight: 300;
         font-size: 1em;
 	}
 	&__description{
@@ -266,6 +266,11 @@ p{
 
     h1{
         font-size: 1.8em;
+        font-family: 'Ubuntu';
+    }
+    
+    p{
+        line-height: 1.4em;
     }
 
     .header{

@@ -52,7 +52,7 @@ p {
     border-bottom: 1px solid rgba(24, 123, 226, 0.25); }
 
 .header {
-  padding: 30px 30px 4em;
+  padding: 10px 30px 3em;
   position: relative; }
   .header__block {
     float: left; }
@@ -94,7 +94,7 @@ p {
       width: 105%; }
   .item__title {
     padding-bottom: .1em;
-    font-weight: 700;
+    font-weight: 300;
     font-size: 1em; }
   .item__description {
     padding: 0 0 1em;
@@ -195,7 +195,11 @@ p {
     padding-top: 2em; } }
 @media screen and (max-width: 640px) {
   h1 {
-    font-size: 1.8em; }
+    font-size: 1.8em;
+    font-family: 'Ubuntu'; }
+
+  p {
+    line-height: 1.4em; }
 
   .header__block {
     float: none; }
