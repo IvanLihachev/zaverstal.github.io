@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+@import url('https://fonts.googleapis.com/css?family=Merriweather:300');
+
 $color: #0e7aff;
 // $red: #ff1627;
 // $red-l: rgba(230,9,0,0.25);
@@ -14,26 +17,47 @@ $black: #090909;
 }
 
 .clear{
-	clear: both;
+    &:after{
+        content: '';
+        display: block;
+        clear: both;
+    }
 }
 
 html{
-    background: #151515;
+    background: #6b51a0;
+    background: -moz-linear-gradient(-45deg, #6b51a0 0%, #40abdf 100%);
+    background: -webkit-linear-gradient(-45deg, #6b51a0 0%,#40abdf 100%);
+    background: linear-gradient(135deg, #6b51a0 0%,#40abdf 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6b51a0', endColorstr='#40abdf',GradientType=1 );
 }
 
 body{
-	font-family: -apple-system, Helvetica, Arial, sans-serif;
-	font-size: 17px;
+	font: 21px 'Ubuntu', Helvetica, Arial, sans-serif;
 	color: #fff;
-    max-width: 1580px;
+    max-width: 1680px;
     margin: 0 auto;
-    padding: 30px 2%;
+    padding: 30px 2% 30px;
     -webkit-font-smoothing: antialiased;
+}
+
+h1{
+    font-family: 'Merriweather', serif;
+    font-weight: 300;
+    font-size: 2.8em;
+    line-height: 1.2em;
+    padding: 0.5em 0 1em;
+}
+
+h3{
+    font-size: 1.4em;
+    font-weight: 400;
 }
 
 p{
 	color: #fff;
-	line-height: 1.4em;
+	line-height: 1.2em;
+    margin-bottom: 0.5em;
 }
 
 .link{
@@ -41,38 +65,33 @@ p{
 	-webkit-transition: color 0.2s ease;
     border-bottom: 1px solid rgba(255,255,255,0.25);
 	&:hover, &:active{
-		color: $red;
+        opacity: 0.65;
         border-bottom: 1px solid $red-l;
 	}
 }
 
 .header{
-	padding: 0 30px 5em;
-	clear: both;
+    @extend .clear;
+	padding: 30px 30px 5em;
 	position: relative;
+    &__block{
+        float: left;
+        &_left{
+            width: 70%;
+            margin-right: 5%;
+        }
+        &_right{
+            width: 25%;
+        }
+    }
 	&__face{
         display: inline-block;
-		width: 100px;
-		height: 100px;
-		border-radius: 50px;
-        position: absolute;
-        right: 30px;
-        top: 0;
+		width: 200px;
+		height: 200px;
+		border-radius: 100px;
 	}
-    &__type{
-        display: inline-block;
-        vertical-align: top;
-        padding-top: 1em;
-    }
 	&__name{
-        font-size: 2.2em;
-        padding-bottom: 0.5em;
-	}
-	&__description{
-        font-size: 1em;
-        position: absolute;
-        top: 21px;
-        left: 270px;
+        padding: 0.5em 0;
 	}
 }
 
@@ -84,10 +103,14 @@ p{
 	}
 }
 
+.title{
+    padding: 0 30px 60px;
+}
+
 .item{
 	display: block;
-	width: 25%;
-  	padding: 0 30px 70px 30px;
+	width: 33.33333%;
+  	padding: 0 35px 100px 35px;
   	@extend .box-sizing;
   	&_2x{
   		width: 50%;
@@ -98,8 +121,11 @@ p{
 	&__image{
 		padding-bottom: 1em;
 		width: 100%;
-		max-width: 330px;
         transition: transform 0.4s ease;
+        &_round{
+            margin: -2.5% -2.5% 0 -2.5%;
+            width: 105%;
+        }
 	}
 	&__title{
 		padding-bottom: .1em;
@@ -107,16 +133,16 @@ p{
         font-size: 1em;
 	}
 	&__description{
-		padding: 0.5em 0;
-		font-size: 0.8em;
+		padding: 0 0 1em;
+		font-size: 0.85em;
 	}
 	&__do{
-		font-size: 0.8em;
-		color: #555 !important;
+		font-size: 0.85em;
+		color: #fff !important;
         display: inline-block;
-        background: $black;
+        background: rgba(0,0,0,0.22);
         padding: 4px 9px;
-        border-radius: 3px;
+        border-radius: 6px;
         margin: 8px 12px 0 -9px;
 	}
     &__time{
@@ -125,8 +151,7 @@ p{
         opacity: 0.15;
     }
 	&:hover .link{
-		color: $red;
-        border-bottom: 1px solid $red-l;
+		opacity: 0.65;
 	}
     &:hover .item__image{
         transform: translateY(-10px);
@@ -175,6 +200,44 @@ p{
 }
 
 @media screen and (max-width: 1024px) {
+
+    h1{
+        font-size: 2.2em;
+        padding: 0.5em 0;
+    }
+
+    p{
+        margin-bottom: 0px;
+    }
+
+    .header{
+        &__block{
+            float: none;
+            &_left{
+                width: 100%;
+            }
+            &_right{
+                margin-top: 60px;
+                width: auto;
+                position: relative;
+                padding-left: 140px;
+            }
+        }
+        &__face{
+            display: inline-block;
+            position: absolute;
+            left: -5px;
+            top: -5px;
+            width: 120px;
+            height: 120px;
+            border-radius: 100px;
+            float: left;
+        }
+        &__name{
+            padding: 0 0;
+        }
+    }
+
 	.item{
         width: 50%;
         &_2x{
@@ -200,6 +263,38 @@ p{
 }
 
 @media screen and (max-width: 640px) {
+
+    h1{
+        font-size: 1.8em;
+    }
+
+    .header{
+        &__block{
+            float: none;
+            &_left{
+                width: 100%;
+            }
+            &_right{
+                margin-top: 60px;
+                width: auto;
+                position: relative;
+                padding-left: 0;
+            }
+        }
+        &__face{
+            display: inline-block;
+            position: inherit;
+            width: 120px;
+            height: 120px;
+            border-radius: 100px;
+            float: none;
+            margin-right: 20px;
+        }
+        &__name{
+            padding: 0 0;
+        }
+    }
+
 	.item{
 		width: 100%;
 		padding: 0 25px 75px;
@@ -208,13 +303,7 @@ p{
             max-width: 330px !important;
         }
 	}
-    .header{
-        &__face{
-            width: 80px;
-            height: 80px;
-            top: 7px;
-        }
-	}	
+	
 }
 
 

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=0.85">
         <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
         <meta property="og:image" content="http://ivanlihachev.ru/img/face.png">
         <meta property="og:image:type" content="image/png">
-        <title>Иван Лихачев</title>
+        <title>Иван Лихачев. Создание лендингов</title>
         <link href="css/reset.css" rel="stylesheet" type="text/css">
         <link href="css/style.css" rel="stylesheet" type="text/css">
         <link href="css/likely.css" rel="stylesheet" type="text/css">
@@ -14,57 +14,48 @@
     <body>
 
 
-        <header class="header emerge" data-effect="slide" data-down="50px">
-            <img class="header__face" src="img/face.png" alt="Иван Лихачев">
-            <div class="header__type">
-                <h1 class="header__name">Иван</br>Лихачев</h1>
-                <p class="header__description">Работаю дизайнером с&nbsp2010&nbspгода.</br>Придумываю и&nbspрисую интерфейсы, верстаю сайты.</br>Живу в&nbspМагнитогорске.</p>
+        <header class="header">
+            <div class="header__block header__block_left">
+                <h1>Сделаю лендинг, одностраничник, сайт-визитку или&nbspпосадочную страницу</h1>
+                <p>С бесплатным хостингом на <a class="link" href="https://pages.github.com/">Github Pages</a></p>
+            </div>
+            <div class="header__block header__block_right">
+                <img class="header__face" src="img/face.png" alt="Иван Лихачев">
+                <h3 class="header__name">Иван Лихачев</h3>
+                <p>Работаю дизайнером с&nbsp2010&nbspгода.</p>
+                <p>Придумываю и&nbspрисую интерфейсы, верстаю сайты.</p>
+                <p>Живу в&nbspМагнитогорске.</p>
             </div>
         </header>
           
+        
+        <div class="title">
+            <h3>Портфолио</h3>
+        </div>
 
         <div class="grid">
 
-            <span class="item item_nohover emerge" data-effect="slide" data-hold="100"  >
-                <img class="item__image" src="img/projects/actionka.png" alt="">
-                <p class="item__title">Логотип Акционки</p>
-                <p class="item__time">Январь 2017</p>
-                <p class="item__do">Дизайн</p>
-
-            </span>
-
             <a href="http://tatyanalihacheva.ru" class="item emerge" data-effect="slide" data-hold="100"  >
-                <img class="item__image" src="img/projects/tlihacheva.png" alt="">
+                <img class="item__image item__image_round" src="img/projects/tlihacheva.png" alt="">
                 <p class="item__title"><span class="link">Сайт-портфолио Татьяны Лихачевой</span></p>
-                <p class="item__time">Декабрь 2016</p>
                 <p class="item__do">Ведение проекта</p>
                 <p class="item__do">Дизайн</p>
                 <p class="item__do">Верстка</p>
             </a>
 
-            <a href="https://oip.io" class="item emerge" data-effect="slide" data-hold="100"  >
-                <img class="item__image" src="img/projects/oip.png" alt="">
-                <p class="item__title"><span class="link">oip.io</span></p>
-                <p class="item__description">Whois сервис</p>
-                <p class="item__time">Ноябрь 2016</p>
-                <p class="item__do">Дизайн</p>
-                <p class="item__do">Верстка</p>
-            </a>
 
             <a href="https://tyugaev.github.io/number-divider/" class="item emerge" data-effect="slide" data-hold="100"  >
                 <img class="item__image" src="img/projects/number-divider.png" alt="">
                 <p class="item__title"><span class="link">number-divider.js</span></p>
                 <p class="item__description">jQuery плагин, который разбивает числа по формату.</p>
-                <p class="item__time">Ноябрь 2016</p>
                 <p class="item__do">Ведение проекта</p>
                 <p class="item__do">Дизайн</p>
                 <p class="item__do">Верстка</p>
             </a>
           
-            <a href="https://www.hideman.net" class="item item_2x emerge" data-effect="slide" data-hold="100"  >
+            <a href="https://www.hideman.net" class="item emerge" data-effect="slide" data-hold="100"  >
                 <img class="item__image" src="img/projects/hideman_site.png" alt="">
                 <p class="item__title"><span class="link">3-я версия сайта Hideman VPN</span></p>
-                <p class="item__time">Июль 2016</p>
                 <p class="item__do">Дизайн</p>
                 <p class="item__do">Верстка</p>
             </a>
@@ -72,7 +63,6 @@
             <a href="https://www.hideman.net/en/docs/download-page/chrome/" class="item emerge" data-effect="slide" data-hold="500" >
                 <img class="item__image" src="img/projects/hideman_chrome.png" alt="">
                 <p class="item__title"><span class="link">Расширение Hideman VPN для&nbspГугл Хрома</span></p>
-                <p class="item__time">Июль 2016</p>
                 <p class="item__do">Дизайн</p>
                 <p class="item__do">Верстка</p>
             </a>
@@ -80,28 +70,24 @@
             <a href="https://www.hideman.net/en/docs/download-page/macos/" class="item emerge" data-effect="slide" data-hold="100"  >
                 <img class="item__image" src="img/projects/hideman_mac.png" alt="">
                 <p class="item__title"><span class="link">Hideman VPN для&nbspmacOS</span></p>
-                <p class="item__time">Май 2016</p>
                 <p class="item__do">Дизайн</p>
             </a>
 
             <a href="https://www.hideman.net/en/docs/download-page/ios/" class="item emerge" data-effect="slide" data-hold="100"  >
                 <img class="item__image" src="img/projects/hideman_ios.png" alt="">
                 <p class="item__title"><span class="link">Hideman VPN для&nbspайфона и&nbspайпада</span></p>
-                <p class="item__time">Май 2016</p>
                 <p class="item__do">Дизайн</p>
             </a>
             
             <a href="https://www.hideman.net/en/docs/download-page/android/" class="item emerge" data-effect="slide" data-hold="100"  >
                 <img class="item__image" src="img/projects/hideman_android.png" alt="">
                 <p class="item__title"><span class="link">Hideman VPN для&nbspАндройда</span></p>
-                <p class="item__time">2015</p>
                 <p class="item__do">Дизайн</p>
             </a>
 
             <span class="item item_nohover item_2x emerge" data-effect="slide" data-hold="100"  >
                 <img class="item__image" src="img/projects/skycinema.png" alt="">
                 <p class="item__title">Сайт кинотеатра Sky-cinema</p>
-                <p class="item__time">2015</p>
                 <p class="item__do">Ведение проекта</p>
                 <p class="item__do">Дизайн</p>
                 <p class="item__do">Верстка</p>
@@ -111,7 +97,6 @@
                 <img class="item__image" src="img/projects/pivoprovod.png" alt="">
                 <p class="item__title">Пивопровод</p>
                 <p class="item__description">Сайт доставки пива</p>
-                <p class="item__time">2013</p>
                 <p class="item__do">Ведение проекта</p>
                 <p class="item__do">Дизайн</p>
                 <p class="item__do">Верстка</p>
@@ -120,14 +105,12 @@
             <span class="item item_nohover emerge" data-effect="slide" data-hold="100"  >
                 <img class="item__image" src="img/projects/hideman_logo.png" alt="">
                 <div class="item__title">Логотип Hideman VPN</div>
-                <p class="item__time">2012</p>
             </span>
 
             <span href="https://play.google.com/store/apps/details?id=net.hideman&hl=ru" class="item item_2x item_nohover emerge"   data-effect="slide" data-hold="100" >
                 <img class="item__image" src="img/projects/tarelka.png" alt="">
                 <p class="item__title">Тарелка</p>
                 <p class="item__description">Сайт доставки еды</p>
-                <p class="item__time">2012</p>
                 <p class="item__do">Дизайн</p>
                 <p class="item__do">Верстка</p>
             </span>
@@ -135,7 +118,6 @@
             <span class="item item_nohover emerge" data-effect="slide" data-hold="100"  data-hold="100" >
                 <img class="item__image" src="img/projects/dinix_logo.png" alt="">
                 <div class="item__title">Логотип веб-студии Dinix</div>
-                <p class="item__time">2011</p>
             </span>
 
         </div>
@@ -146,7 +128,7 @@
         <div class="footer__contact"><a class="link" href="https://vk.com/lihachev_ivan">vk.com/lihachev_ivan</a></div>
         <div class="footer__contact"><a class="phone" href="tel:79068991681">+7 906 899-16-81</a></div>
         <div class="social">
-            <div class="likely likely-light" data-url="http://ivanlihachev.ru" >
+            <div class="likely likely-light likely-big" data-url="http://ivanlihachev.ru" >
                 <div class="vkontakte">Поделиться</div>
                 <div class="facebook">Поделиться</div>
                 <div class="twitter">Твитнуть</div>
