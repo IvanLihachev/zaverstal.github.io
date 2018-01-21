@@ -32,7 +32,7 @@ h1 {
   font-weight: 300;
   font-size: 2.8em;
   line-height: 1.2em;
-  padding: 0.5em 0 1em; }
+  padding: 0 0 0.5em 0; }
 
 h3 {
   font-size: 1.4em;
@@ -40,7 +40,7 @@ h3 {
 
 p {
   color: #fff;
-  line-height: 1.2em;
+  line-height: 1.4em;
   margin-bottom: 0.5em; }
 
 .link {
@@ -52,22 +52,27 @@ p {
     border-bottom: 1px solid rgba(24, 123, 226, 0.25); }
 
 .header {
-  padding: 10px 30px 3em;
+  padding: 10px 30px 4.5em;
   position: relative; }
   .header__block {
     float: left; }
     .header__block_left {
-      width: 73%;
+      width: 65%;
       margin-right: 5%; }
     .header__block_right {
-      width: 22%; }
+      width: 30%; }
   .header__face {
     display: inline-block;
-    width: 200px;
-    height: 200px;
-    border-radius: 100px; }
+    width: 160px;
+    height: 160px;
+    border-radius: 100px;
+    margin-left: -10px;
+    float: left;
+    margin-right: 40px; }
   .header__name {
-    padding: 0.5em 0; }
+    padding: 0.75em 0 0; }
+  .header__description {
+    font-size: 0.85em; }
 
 .grid:after {
   content: '';
@@ -75,7 +80,7 @@ p {
   clear: both; }
 
 .title {
-  padding: 0 30px 60px; }
+  padding: 0 30px 1.5em; }
 
 .item {
   display: block;
@@ -86,12 +91,11 @@ p {
     .item_2x .item__image {
       max-width: 730px; }
   .item__image {
-    padding-bottom: 1em;
+    margin-bottom: 1em;
     width: 100%;
     transition: transform 0.4s ease; }
     .item__image_round {
-      margin: -2.5% -2.5% 0 -2.5%;
-      width: 105%; }
+      border-radius: 25px; }
   .item__title {
     padding-bottom: .1em;
     font-weight: 300;
@@ -108,9 +112,9 @@ p {
     border-radius: 6px;
     margin: 8px 12px 0 -9px; }
   .item__time {
-    margin: 0.3em 0 0.9em 0;
+    margin: 1em 0 0.9em 0;
     font-size: 0.7em;
-    opacity: 0.15; }
+    opacity: 0.2; }
   .item:hover .link {
     opacity: 0.65; }
   .item:hover .item__image {

@@ -46,7 +46,7 @@ h1{
     font-weight: 300;
     font-size: 2.8em;
     line-height: 1.2em;
-    padding: 0.5em 0 1em;
+    padding: 0 0 0.5em 0;
 }
 
 h3{
@@ -56,7 +56,7 @@ h3{
 
 p{
 	color: #fff;
-	line-height: 1.2em;
+	line-height: 1.4em;
     margin-bottom: 0.5em;
 }
 
@@ -72,27 +72,33 @@ p{
 
 .header{
     @extend .clear;
-	padding: 10px 30px 3em;
+	padding: 10px 30px 4.5em;
 	position: relative;
     &__block{
         float: left;
         &_left{
-            width: 73%;
+            width: 65%;
             margin-right: 5%;
         }
         &_right{
-            width: 22%;
+            width: 30%;
         }
     }
 	&__face{
         display: inline-block;
-		width: 200px;
-		height: 200px;
+		width: 160px;
+		height: 160px;
 		border-radius: 100px;
+        margin-left: -10px;
+        float: left;
+        margin-right: 40px;
 	}
 	&__name{
-        padding: 0.5em 0;
+        padding: 0.75em 0 0;
 	}
+    &__description{
+        font-size: 0.85em;
+    }
 }
 
 .grid{
@@ -104,7 +110,7 @@ p{
 }
 
 .title{
-    padding: 0 30px 60px;
+    padding: 0 30px 1.5em;
 }
 
 .item{
@@ -119,12 +125,11 @@ p{
   		}
   	}
 	&__image{
-		padding-bottom: 1em;
+		margin-bottom: 1em;
 		width: 100%;
         transition: transform 0.4s ease;
         &_round{
-            margin: -2.5% -2.5% 0 -2.5%;
-            width: 105%;
+            border-radius: 25px;
         }
 	}
 	&__title{
@@ -146,9 +151,9 @@ p{
         margin: 8px 12px 0 -9px;
 	}
     &__time{
-        margin: 0.3em 0 0.9em 0;
+        margin: 1em 0 0.9em 0;
         font-size: 0.7em;
-        opacity: 0.15;
+        opacity: 0.2;
     }
 	&:hover .link{
 		opacity: 0.65;
