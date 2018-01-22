@@ -1,27 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
 @import url('https://fonts.googleapis.com/css?family=Merriweather:300');
 
-$color: #0e7aff;
-// $red: #ff1627;
-// $red-l: rgba(230,9,0,0.25);
+$theme: #4598d0;
 $red: #187be2;
 $red-l: rgba(24,123,226,0.25);
 $black: #090909;
+$round: 8px;
 
-.box-sizing{
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-ms-box-sizing: border-box;
-	-o-box-sizing: border-box;
-	box-sizing: border-box;
-}
 
-.clear{
-    &:after{
-        content: '';
-        display: block;
-        clear: both;
-    }
+html, body{
+    width: 100%;
+    
 }
 
 html{
@@ -35,10 +24,29 @@ html{
 body{
 	font: 21px 'Ubuntu', Helvetica, Arial, sans-serif;
 	color: #fff;
-    max-width: 1680px;
     margin: 0 auto;
-    padding: 30px 2% 30px;
+    padding: 1em 2% 0;
     -webkit-font-smoothing: antialiased;
+}
+
+*:focus{
+    outline: none;
+}
+
+.box-sizing{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.clear{
+    &:after{
+        content: '';
+        display: block;
+        clear: both;
+    }
 }
 
 h1{
@@ -46,7 +54,7 @@ h1{
     font-weight: 300;
     font-size: 2.8em;
     line-height: 1.2em;
-    padding: 0 0 0.5em 0;
+    padding: 0 0 0.25em 0;
 }
 
 h3{
@@ -57,13 +65,38 @@ h3{
 p{
 	color: #fff;
 	line-height: 1.4em;
-    margin-bottom: 0.5em;
+    // margin-bottom: 0.5em;
 }
 
-.link{
+img{
+    width: 100%;
+    max-width: 100%;
+}
+
+.text{
+    &_md{
+        font-size: 1em;
+    }
+    &_sm{
+        font-size: 0.8em;
+    }
+    &_xs{
+        font-size: 0.65em;
+    }
+}
+
+.round{
+    border-radius: $round;
+}
+
+.link, 
+.link_noborder{
 	color: #fff;
 	-webkit-transition: color 0.2s ease;
     border-bottom: 1px solid rgba(255,255,255,0.25);
+    &_noborder{
+        border-bottom: none;
+    }
 	&:hover, &:active{
         opacity: 0.65;
         border-bottom: 1px solid $red-l;
@@ -71,42 +104,27 @@ p{
 }
 
 .header{
-    @extend .clear;
-	padding: 10px 30px 4.5em;
-	position: relative;
-    &__block{
-        float: left;
-        &_left{
-            width: 65%;
-            margin-right: 5%;
-        }
-        &_right{
-            width: 30%;
-        }
+	padding: 0 0 1em;
+    &__title{
+        padding-bottom: 2em;
     }
-	&__face{
-        display: inline-block;
-		width: 160px;
-		height: 160px;
-		border-radius: 100px;
-        margin-left: -10px;
-        float: left;
-        margin-right: 40px;
-	}
-	&__name{
-        padding: 0.75em 0 0;
-	}
-    &__description{
-        font-size: 0.85em;
+    &__myself{
+        padding-bottom: 2em;
     }
 }
 
-.grid{
-	&:after{
-		content: '';
-		display: block;
-		clear: both;
-	}
+.myself{
+    &__face{
+        display: inline-block;
+        width: 100%;
+        max-width: 100%;
+        border-radius: 100px;
+    }
+    &__name{
+        padding: 0em 0 0;
+    }
+    &__description{
+    }
 }
 
 .title{
@@ -114,46 +132,25 @@ p{
 }
 
 .item{
-	display: block;
-	width: 33.33333%;
-  	padding: 0 35px 100px 35px;
-  	@extend .box-sizing;
-  	&_2x{
-  		width: 50%;
-  		& .item__image{
-  			max-width: 730px;
-  		}
-  	}
-	&__image{
-		margin-bottom: 1em;
-		width: 100%;
-        transition: transform 0.4s ease;
-        &_round{
-            border-radius: 25px;
+    margin-bottom: 2em;
+	&__img{
+		margin-bottom: 0.33em;
+        border-radius: 25px;
+        &_noround{
+             border-radius: 0px;
         }
 	}
-	&__title{
-		padding-bottom: .1em;
-        font-weight: 300;
-        font-size: 1em;
+	&__name{
+		padding-bottom: .25em;
 	}
 	&__description{
-		padding: 0 0 1em;
-		font-size: 0.85em;
-	}
-	&__do{
-		font-size: 0.85em;
-		color: #fff !important;
-        display: inline-block;
-        background: rgba(0,0,0,0.22);
-        padding: 4px 9px;
-        border-radius: 6px;
-        margin: 8px 12px 0 -9px;
+        @extend .text_sm;
+		margin-bottom: 0.5em;
+
 	}
     &__time{
-        margin: 1em 0 0.9em 0;
-        font-size: 0.7em;
-        opacity: 0.2;
+        @extend .text_xs;
+        opacity: 0.33;
     }
 	&:hover .link{
 		opacity: 0.65;
@@ -169,39 +166,69 @@ p{
 }
 
 .footer{
-	padding: 2em 0px 1em;
-    border-top: 2px solid rgba(255, 255, 255, 0.05);
-    margin: 0 30px;
+	padding: 4em 0px 2em;
     position: relative;
+    &__line{
+        border-top: 2px solid rgba(255, 255, 255, 0.05);
+    }
 	&__contact{
 		margin-bottom: 1em;
+        float: left;
+        margin-right: 30px;
 	}
+    &__copy{
+        padding-top: 0.25em;
+    }
 }
 
-.phone{
-	color: #fff;
+.likely{
+    vertical-align: top;
 }
 
-.social{
-	padding-top: 2em;
+.filter{
+    display: none;
+    padding-bottom: 1.25em;
+    &__group{
+        display: inline-block;
+    }
+    &__button{
+        @extend .text_sm;
+        float: left;
+        color: #fff;
+        display: inline-block;
+        // background: rgba(0,0,0,0.1);
+        background: none;
+        padding: 4px 12px;
+        border-radius: 0;
+        border-left: none;
+        border-top: none;
+        border-right: none;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.05);
+        margin: 0 0 0 0;
+        &_checked{
+            // background: rgba(0,0,0,0.25);
+            border-bottom: 2px solid rgba(0,0,0,0.5);
+            color: rgba(0,0,0,0.75);
+        }
+        &:hover{
+            opacity: 0.75;
+        }
+        // &:first-child{
+        //     border-radius: $round 0 0 $round;
+        // }
+        // &:last-child{
+        //     border-radius: 0 $round $round 0;
+        // }
+    }
 }
 
-.copyright{
-    position: absolute;
-    right: 0;
-    bottom: 1em;
+.button-checked{
+    background:#000;
 }
+
 
 @media screen and (max-width: 1360px) {
-    body{
-        max-width: 1200px;
-    }
-	.item{
-        width: 33.3333%;
-        &_2x{
-            width: 66.6666%;
-        }
-	}
+
 }
 
 @media screen and (max-width: 1024px) {
@@ -215,105 +242,35 @@ p{
         margin-bottom: 0px;
     }
 
-    .header{
-        &__block{
-            float: none;
-            &_left{
-                width: 100%;
-            }
-            &_right{
-                margin-top: 60px;
-                width: auto;
-                position: relative;
-                padding-left: 140px;
-            }
-        }
-        &__face{
-            display: inline-block;
-            position: absolute;
-            left: -5px;
-            top: -5px;
-            width: 120px;
-            height: 120px;
-            border-radius: 100px;
-            float: left;
-        }
-        &__name{
-            padding: 0 0;
-        }
-    }
-
-	.item{
-        width: 50%;
-        &_2x{
-            width: 100%;
-        }
-	}
-    .header{
-		padding: 0 30px 5em;
-        &__description{
-            font-size: 1em;
-            position: relative;
-            top: 0;
-            left: 0;
-        }
-	}
-    .footer{
-        margin: 0 25px;
-    }
-    .copyright{
-        position: static;
-        padding-top: 2em;
-    }
 }
 
 @media screen and (max-width: 640px) {
 
+    body{
+        padding-top: 0px;
+    }
+
     h1{
         font-size: 1.8em;
         font-family: 'Ubuntu';
+        line-height: 1.1em;
     }
     
     p{
-        line-height: 1.4em;
+        line-height: 1.2em;
     }
 
-    .header{
-        &__block{
-            float: none;
-            &_left{
-                width: 100%;
-            }
-            &_right{
-                margin-top: 60px;
-                width: auto;
-                position: relative;
-                padding-left: 0;
-            }
-        }
-        &__face{
-            display: inline-block;
-            position: inherit;
-            width: 120px;
-            height: 120px;
-            border-radius: 100px;
-            float: none;
-            margin-right: 20px;
-        }
+    .myself{
         &__name{
-            padding: 0 0;
-        }
-    }
-
-	.item{
-		width: 100%;
-		padding: 0 25px 75px;
-        &__image{
-            width: 100%;
-            max-width: 330px !important;
+            padding: 0px;
         }
 	}
-	
+
+    .item{
+        &__img{
+            border-radius: 20px;
+        }
+    }
 }
 
 
