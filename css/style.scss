@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Ubuntu');
-@import url('https://fonts.googleapis.com/css?family=Merriweather:300');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,700,900');
+@import url('https://fonts.googleapis.com/css?family=Merriweather:300,700');
 
 $theme: #4598d0;
 $red: #187be2;
@@ -22,7 +22,8 @@ html{
 }
 
 body{
-	font: 21px 'Ubuntu', Helvetica, Arial, sans-serif;
+	font: 21px 'Source Sans Pro', Helvetica, Arial, sans-serif;
+    font-weight: 400;
 	color: #fff;
     margin: 0 auto;
     padding: 1em 2% 0;
@@ -50,10 +51,9 @@ body{
 }
 
 h1{
-    font-family: 'Merriweather', serif;
-    font-weight: 300;
-    font-size: 2.8em;
-    line-height: 1.2em;
+    font-weight: 900;
+    font-size: 4em;
+    line-height: 0.9em;
     padding: 0 0 0.25em 0;
 }
 
@@ -64,8 +64,9 @@ h3{
 
 p{
 	color: #fff;
-	line-height: 1.4em;
+	line-height: 1.2em;
     // margin-bottom: 0.5em;
+    opacity: 0.8;
 }
 
 img{
@@ -74,6 +75,9 @@ img{
 }
 
 .text{
+    &_lg{
+        font-size: 1.2em;
+    }
     &_md{
         font-size: 1em;
     }
@@ -107,6 +111,9 @@ img{
 	padding: 0 0 1em;
     &__title{
         padding-bottom: 2em;
+        &__text{
+            @extend .text_lg;
+        }
     }
     &__myself{
         padding-bottom: 2em;
@@ -121,9 +128,16 @@ img{
         border-radius: 100px;
     }
     &__name{
-        padding: 0em 0 0;
+        @extend .text_lg;
+        font-weight: 700;
     }
     &__description{
+    }
+    &__info{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
     }
 }
 
@@ -132,7 +146,7 @@ img{
 }
 
 .item{
-    margin-bottom: 2em;
+    margin-bottom: 3em;
 	&__img{
 		margin-bottom: 0.33em;
         border-radius: 25px;
@@ -141,15 +155,16 @@ img{
         }
 	}
 	&__name{
+        @extend .text_lg;
+        font-weight: 700;
 		padding-bottom: .25em;
 	}
 	&__description{
-        @extend .text_sm;
+        @extend .text_md;
 		margin-bottom: 0.5em;
-
 	}
     &__time{
-        @extend .text_xs;
+        @extend .text_sm;
         opacity: 0.33;
     }
 	&:hover .link{
@@ -172,12 +187,14 @@ img{
         border-top: 2px solid rgba(255, 255, 255, 0.05);
     }
 	&__contact{
+        @extend .text_lg;
 		margin-bottom: 1em;
         float: left;
         margin-right: 30px;
 	}
     &__copy{
         padding-top: 0.25em;
+        opacity: .5;
     }
 }
 
@@ -227,15 +244,25 @@ img{
 }
 
 
-@media screen and (max-width: 1360px) {
+@media screen and (max-width: 1200px) {
+
+    h1{
+        font-size: 3.6em;
+    }
+
+    .myself{
+        &__info{
+            justify-content: center;
+        }
+    }
 
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 992px) {
 
     h1{
-        font-size: 2.2em;
-        padding: 0.5em 0;
+        font-size: 3em;
+        padding: 0 0 0.25em 0;
     }
 
     p{
@@ -244,33 +271,43 @@ img{
 
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 768px) {
 
-    body{
-        padding-top: 0px;
+    .footer{
+        &__copy{
+            padding-top: 3em;
+        }
+        &__likely{
+            padding-top: 1em;
+        }
     }
 
+}
+
+@media screen and (max-width: 576px) {
+
     h1{
-        font-size: 1.8em;
-        font-family: 'Ubuntu';
-        line-height: 1.1em;
+        font-size: 2em;
+        line-height: 1em;
     }
     
     p{
-        line-height: 1.2em;
+        line-height: 1.1em;
     }
 
     .myself{
         &__name{
             padding: 0px;
         }
-	}
+    }
 
     .item{
         &__img{
             border-radius: 20px;
         }
     }
+
 }
+
 
 
