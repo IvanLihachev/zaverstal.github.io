@@ -3,21 +3,25 @@ $(document).ready(function() {
 
     // Масонри
 
-    var $container = $('.grid');
-    $container.imagesLoaded(function(){
-      $container.masonry({
-            itemSelector : '.grid-item',
-            columnWidth: '.grid-sizer',
-            percentPosition: true
-      });
-    });
+    
 
     $('.grid').masonry({
         // options
         itemSelector : '.grid-item',
         columnWidth: '.grid-sizer',
-        percentPosition: true
+        percentPosition: true,
+        transitionDuration: 0
     }).masonry('reload');
+
+    var $container = $('.grid');
+    $container.imagesLoaded(function(){
+      $container.masonry({
+            itemSelector : '.grid-item',
+            columnWidth: '.grid-sizer',
+            percentPosition: true,
+            transitionDuration: 0
+      });
+    });
 
 
     // Фильтрация
