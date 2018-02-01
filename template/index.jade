@@ -5,40 +5,57 @@ block title
 
 block content
 
-	.header.section_header
+	.section-menu.menu.emerge(data-effect="slide" data-down="2cm")
 		.container-fluid
 			.row
-				.col-lg-8
-					.header__title.emerge
-						h1 Создание лендингов под&nbspключ
-						p.header__title__text С бесплатным, пожизненным хостингом
-				.col-lg-4
-					.header__myself.myself.emerge
-						.row
-							.col-xl-4.col-lg-4.col-md-2.col-sm-3.col-4
-								.myself__img
-									img(class="myself__face" src="img/face.jpg" alt="Иван Лихачев")
-							.col-xl-8.col-lg-8.col-md-10.col-sm-9.col-8
-								.myself__info
-									.myself__name Иван Лихачев
-									p.myself__description Работаю дизайнером с&nbsp2010&nbspгода. Живу в&nbspМагнитогорске
+				.col-md-3
+					.header__logo 
+					//- img(src="img/icons/file.svg", alt="").header__logo__img
+					|  zaverstal.ru
+				.col-md-9.text-right
+					.menu__contact
+						a.link_noborder(href="tel:79068991681") +7 906 899-16-81
+					.menu__contact
+						a.link(href="https://vk.com/lihachev_ivan") vk.com/lihachev_ivan
+					.menu__contact почта: 
+						a.link_noborder(href="mailto:design@dinix.ru") design@dinix.ru
 
-	.filter
-		.container-fluid
-			.row
-				.col-12
-					.filter__group
-						button(data-filter="*").filter__button.filter__button_checked Все
-						button(data-filter=".site").filter__button Сайты
-						button(data-filter=".mobile").filter__button Мобильные приложения
-						button(data-filter=".face").filter__button Интерфейсы
-						button(data-filter=".logo").filter__button Логотипы
 
-	.content
+
+	.section.section-header.header.d-flex
+		.container.text-left
+			.row.align-items-center
+				.col-lg-8.order-lg-1.order-2
+					.header__title.emerge(data-effect="slide" data-right="2cm" data-up="0px")
+						.header__hello Привет! Меня зовут
+						.header__name Иван Лихачев
+						.header__text Работаю дизайнером сайтов и&nbspмобильных приложений с&nbsp2010 года. Обучаю HTML верстке. Живу в&nbspМагнитогорске
+				.col-lg-4.order-lg-2.order-1
+					img.emerge(data-effect="zoom" data-scale="0.85" ).header__face(class="myself__face" src="img/face.jpg" alt="Иван Лихачев")
+
+
+
+	.section-offer
+		.offer
+			.container
+				.row
+					.col-lg-6
+						.offer__block
+							img(src="img/icons/create.svg", alt="").offer__img.emerge(data-effect="slide" data-up="2cm")
+							.offer__title Создание сайта или лендинга
+							p Создам сайт или лендинг для вашего продукта или услуги
+					.col-lg-6
+						.offer__block
+							img(src="img/icons/html.svg", alt="").offer__img.emerge(data-effect="slide" data-up="2cm")
+							.offer__title Научу верстать сайты
+							p Базовая или продвинутая html верстка. Удаленно
+
+
+	.section.section-work.work
 		.container-fluid
+			.title.work__title.text-center Портфолио 
 			.row.grid
 				.grid-sizer.col-xl-4.col-md-6
-
 				.item.grid-item.emerge.col-xl-4.col-md-6.site
 					a(href="http://avtoteam74.ru")
 						img(src="img/projects/avtoteam74.jpg", alt="").item__img
@@ -122,27 +139,28 @@ block content
 					.item__name Логотип веб-студии Dinix
 					.item__time 2013
 
-
-	.footer
-		.container-fluid
-			.row
-				.col-lg-12
-					.footer__contact
-						a.link_noborder(href="tel:79068991681") +7 906 899-16-81
-					.footer__contact
-						a.link(href="https://vk.com/lihachev_ivan") vk.com/lihachev_ivan
-					.footer__contact почта: 
-						a.link_noborder(href="mailto:design@dinix.ru") design@dinix.ru
-					
-			.row
-				.col-lg-10
-					.footer__likely
-						.likely.likely-light.likely-big(data-url="http://zaverstal.ru")
-							.vkontakte Поделиться
-							.facebook Поделиться
-							.twitter Твитнуть
-				.col-lg-2 
-					.footer__copy &copy; 2016
+	.section-footer
+		.footer
+			.container-fluid.text-center
+				.row
+					.col-lg-12
+						.footer__contact
+							.footer__contact__item
+								a.link_noborder(href="tel:79068991681") +7 906 899-16-81
+							.footer__contact__item
+								a.link(href="https://vk.com/lihachev_ivan") vk.com/lihachev_ivan
+							.footer__contact__item почта: 
+								a.link_noborder(href="mailto:design@dinix.ru") design@dinix.ru
+						
+				.row
+					.col-lg-12
+						.footer__likely
+							.likely.likely-light.likely-big(data-url="http://zaverstal.ru")
+								.vkontakte Поделиться
+								.facebook Поделиться
+								.twitter Твитнуть
+					.col-lg-12 
+						.footer__copy &copy; 2016
 
 
 	
