@@ -282,6 +282,12 @@ p{
         }
     }
 
+    .work{
+        &__title{
+            padding: 2em 0 1em;
+        }
+    }
+
     .menu{
         display: none;
     }
