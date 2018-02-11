@@ -133,7 +133,8 @@ p {
       border-radius: 0px; }
   .item__name {
     font-weight: 700;
-    padding-bottom: .25em; }
+    padding-bottom: .25em;
+    font-size: 1.2em; }
   .item__time {
     opacity: 0.33; }
   .item:hover .link {
